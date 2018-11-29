@@ -1,0 +1,38 @@
+XML
+<FrameLayout 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent" 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView 
+        android:src="@drawable/icon"
+        android:scaleType="fitCenter"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"/>
+    <TextView
+        android:text="Learn-Android.com"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:gravity="center"/>
+</FrameLayout>
+
+JAVA
+
+private void SwitchLayout2() {
+RelativeLayout Layout1 = (RelativeLayout)findViewById(R.id.layout1);
+RelativeLayout Layout2 = (RelativeLayout)findViewById(R.id.layout2);
+
+// Enable Layout 2 and Disable Layout 1
+Layout1 .setVisibility(View.GONE);
+Layout2.setVisibility(View.VISIBLE);
+}
+
+private void SwitchLayout1() {
+RelativeLayout Layout1 = (RelativeLayout)findViewById(R.id.layout1);
+RelativeLayout Layout2 = (RelativeLayout)findViewById(R.id.layout2);
+
+// Enable Layout 1 & Disable Layout2
+Layout1.setVisibility(View.VISIBLE);
+Layout2.setVisibility(View.GONE);
+}
